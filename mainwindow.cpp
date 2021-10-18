@@ -3,10 +3,7 @@
 #include "huffmancode.h"
 #include <QString>
 
-//QString texto;
 HuffmanCode coder;
-
-MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {

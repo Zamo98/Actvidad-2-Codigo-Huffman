@@ -15,12 +15,16 @@ struct Node{
     char simbolo;
     int frecuencia;
     Node *izq, *der;
+
 };
 
 class HuffmanCode
 {
 public:
+
     HuffmanCode();
+    string coded;
+    string decoded;
     void principal();
     Node *root;
     int indice;
@@ -122,7 +126,6 @@ public:
         }
         cout << "\n\n\n";
     }
-
     string getCoded(string text){
         crearArbol(text);
         return coded;
