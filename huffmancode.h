@@ -25,6 +25,9 @@ public:
     HuffmanCode();
     string coded;
     string decoded;
+    Node *root;
+    int indice;
+    int tamano;
     void principal();
     Node *getNode(char simbolo, int frecuencia, Node *izq, Node *der){
         Node *nodo = new Node();
@@ -61,7 +64,7 @@ public:
             return;
         }
         if(!raiz->izq && !raiz->der){
-            cout << raiz->simbolo;
+            decoded+=(raiz->simbolo);
             return;
         }
         index ++;
@@ -109,6 +112,9 @@ public:
         cout << "\nEl texto codificado es:\n" << str << '\n';
         int index = -1;
         cout << "\nEl texto decodificado es:\n";
+        root = raiz;
+        indice = index;
+        tamano = (int)str.size();
         while(index < (int)str.size() - 2){
             decode(raiz, index, str);
         }
@@ -117,6 +123,12 @@ public:
     string getCoded(string text){
         crearArbol(text);
         return coded;
+    }
+    string getDecoded(Node *root, int i, int size, string mensaje){
+        while (i < size-2){
+            decode(root, i, mensaje);
+        }
+        return decoded;
     }
 };
 

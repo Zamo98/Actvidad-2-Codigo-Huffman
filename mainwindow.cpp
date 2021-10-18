@@ -31,3 +31,18 @@ void MainWindow::on_Comprimir_clicked()
     qtexto = QString::fromStdString(codedText);
     ui->salida->setPlainText("Mensaje comprimido: "+qtexto);
 }
+
+
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    QString qtexto;
+    qtexto = ui->entrada->toPlainText();
+    std::string text = qtexto.toUtf8().constData();
+
+    std::string decodedText = coder.getDecoded(coder.root, coder.indice, coder.tamano, coder.coded);
+
+    qtexto = QString::fromStdString(decodedText);
+    ui->salida->setPlainText("Mensaje descomprimido: "+qtexto);
+}
+
