@@ -20,6 +20,8 @@ public:
 private slots:
     void on_Comprimir_clicked();
 
+    void on_descomprimir_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
