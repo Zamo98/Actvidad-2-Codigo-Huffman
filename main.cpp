@@ -8,7 +8,6 @@
 #include <unordered_map>
 
 #include "huffmancode.h"
-
 HuffmanCode *code = nullptr;
 
 using namespace std;
