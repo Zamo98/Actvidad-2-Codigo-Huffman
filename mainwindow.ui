@@ -14,11 +14,11 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="Comprimir">
+   <widget class="QPushButton" name="comprimir">
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>520</y>
+      <y>540</y>
       <width>89</width>
       <height>25</height>
      </rect>
@@ -30,9 +30,9 @@
    <widget class="QPlainTextEdit" name="entrada">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>40</y>
-      <width>331</width>
+      <x>10</x>
+      <y>70</y>
+      <width>361</width>
       <height>461</height>
      </rect>
     </property>
@@ -40,18 +40,18 @@
    <widget class="QPlainTextEdit" name="salida">
     <property name="geometry">
      <rect>
-      <x>390</x>
-      <y>39</y>
+      <x>400</x>
+      <y>70</y>
       <width>391</width>
       <height>461</height>
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="descomprimir">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>520</y>
+      <x>540</x>
+      <y>540</y>
       <width>121</width>
       <height>25</height>
      </rect>
