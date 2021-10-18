@@ -15,12 +15,16 @@ struct Node{
     char simbolo;
     int frecuencia;
     Node *izq, *der;
+
 };
 
 class HuffmanCode
 {
 public:
+
     HuffmanCode();
+    string coded;
+    string decoded;
     void principal();
     Node *getNode(char simbolo, int frecuencia, Node *izq, Node *der){
         Node *nodo = new Node();
@@ -101,6 +105,7 @@ public:
         for(char simbolo: text){
             str += CodigoHuffman[simbolo];
         }
+        coded = str;
         cout << "\nEl texto codificado es:\n" << str << '\n';
         int index = -1;
         cout << "\nEl texto decodificado es:\n";
@@ -108,6 +113,10 @@ public:
             decode(raiz, index, str);
         }
         cout << "\n\n\n";
+    }
+    string getCoded(string text){
+        crearArbol(text);
+        return coded;
     }
 };
 

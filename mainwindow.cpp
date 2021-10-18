@@ -3,7 +3,7 @@
 #include "huffmancode.h"
 #include <QString>
 
-//QString texto;
+HuffmanCode coder;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -22,7 +22,12 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_Comprimir_clicked()
 {
-    texto = ui->entrada->toPlainText();
-    //code->crearArbol()
-    ui->salida->setPlainText("Mensaje comprimido: "+texto);
+    QString qtexto;
+    qtexto = ui->entrada->toPlainText();
+    std::string text = qtexto.toUtf8().constData();
+
+    std::string codedText = coder.getCoded(text);
+
+    qtexto = QString::fromStdString(codedText);
+    ui->salida->setPlainText("Mensaje comprimido: "+qtexto);
 }
